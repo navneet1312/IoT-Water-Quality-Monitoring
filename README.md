@@ -111,7 +111,7 @@ Flash `wokwi/sketch.ino` to a real ESP32 using Arduino IDE:
 | TDS | 280 - 710 ppm | < 500 ppm | ⚠️ 2 Alerts |
 | Temperature | 20.8 - 30.5 °C | 5 - 35 °C | ✅ Normal |
 | Humidity | 60 - 80% | 30 - 80% | ✅ Normal |
-| Water Safety | 0/1 | 1 (Safe) | 44 Safe, 3 Danger |
+| Water Safety | 0/1 | 1 (Safe) | 41 Safe, 6 Danger |
 
 ## 📱 Dashboard Screenshots
 
