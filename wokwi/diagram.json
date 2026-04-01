@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "author": "Water Monitoring System",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -120,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 100,
+      "left": -250,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -100,
+      "left": -150,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -100,
+      "left": -100,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -120,
+      "left": -50,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -150,
+      "left": 350,
+      "attrs": { "label": "pH Sensor" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": -150,
+      "left": 500,
+      "attrs": { "label": "Turbidity" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 150,
+      "left": 350,
+      "attrs": { "label": "TDS Sensor" }
+    }
+  ],
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+    ["dht1:VCC", "esp:3V3", "red", ["v0"]],
+    ["dht1:GND", "esp:GND.2", "black", ["v0"]],
+    ["dht1:SDA", "esp:D4", "green", ["v0"]],
+    ["lcd1:GND", "esp:GND.1", "black", ["v0"]],
+    ["lcd1:VCC", "esp:VIN", "red", ["v0"]],
+    ["lcd1:SDA", "esp:D21", "blue", ["v0"]],
+    ["lcd1:SCL", "esp:D22", "purple", ["v0"]],
+    ["led1:A", "esp:D25", "green", ["v0"]],
+    ["led1:C", "esp:GND.1", "black", ["v0"]],
+    ["led2:A", "esp:D26", "red", ["v0"]],
+    ["led2:C", "esp:GND.1", "black", ["v0"]],
+    ["bz1:1", "esp:D27", "orange", ["v0"]],
+    ["bz1:2", "esp:GND.1", "black", ["v0"]],
+    ["pot1:VCC", "esp:3V3", "red", ["v0"]],
+    ["pot1:GND", "esp:GND.2", "black", ["v0"]],
+    ["pot1:SIG", "esp:D34", "yellow", ["v0"]],
+    ["pot2:VCC", "esp:3V3", "red", ["v0"]],
+    ["pot2:GND", "esp:GND.2", "black", ["v0"]],
+    ["pot2:SIG", "esp:D35", "brown", ["v0"]],
+    ["pot3:VCC", "esp:3V3", "red", ["v0"]],
+    ["pot3:GND", "esp:GND.2", "black", ["v0"]],
+    ["pot3:SIG", "esp:D32", "cyan", ["v0"]]
+  ]
+}
