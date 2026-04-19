@@ -1,25 +1,26 @@
-# Temp files
-~$*
-*.tmp
-*.bak
+# Temporary Office files
+~$*.pptx
+~$*.docx
+~$*.xlsx
 
-# Older PPT versions (keep only FINAL)
-Water_Quality_Monitoring_IoT_Presentation.pptx
-Water_Quality_Monitoring_IoT_v2.pptx
-Water_Quality_Monitoring_IoT_v3.pptx
-
-# Helper scripts (not needed in repo)
-populate_thingspeak.py
-send_mixed_data.py
-create_ppt.py
-
-# Screenshots folder (already have images/)
-screenshots/
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.env
 
-# OS files
-Thumbs.db
+# OS
 .DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# LaTeX (report is kept local, not in repo)
+*.tex
+*.pdf
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
