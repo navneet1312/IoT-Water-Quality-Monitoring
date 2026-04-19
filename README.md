@@ -3,8 +3,6 @@
 > Real-time water quality monitoring using ESP32, multiple sensors, ThingSpeak cloud integration, and a custom web dashboard.
 
 
-![Water Monitoring System](images/deployment.png)
-
 ## 📋 Overview
 
 This project implements a complete IoT-based water quality monitoring system designed for rivers and lakes. It uses an **ESP32 microcontroller** to read data from multiple water quality sensors, displays readings on an LCD, triggers alerts for unsafe water, and uploads all data to the **ThingSpeak cloud platform** for remote monitoring and visualization.
@@ -12,8 +10,6 @@ This project implements a complete IoT-based water quality monitoring system des
 A custom-built **AquaGuard Web Dashboard** provides real-time visualization with Water Quality Index (WQI) scoring, trend charts, and alert logging.
 
 ## 🏗️ System Architecture
-
-![System Architecture](images/architecture.png)
 
 ## ⚙️ Components Used
 
@@ -28,8 +24,6 @@ A custom-built **AquaGuard Web Dashboard** provides real-time visualization with
 | Green LED | Safe water indicator | GPIO 25 |
 | Red LED | Danger/Alert indicator | GPIO 26 |
 | Active Buzzer | Audible alarm | GPIO 27 |
-
-![Components](images/components.png)
 
 ## 🔧 Project Structure
 
@@ -85,12 +79,6 @@ Flash `wokwi/sketch_v2.ino` to a real ESP32 using Arduino IDE:
 - **Update Interval**: Every 15 seconds
 - **Total Entries**: 47+ (with both SAFE and DANGER readings)
 
-### Real ThingSpeak Data
-
-| pH & Turbidity Charts | TDS, Temp, Humidity & Safety Charts |
-|:---:|:---:|
-| ![Top Charts](images/thingspeak_real_top.png) | ![Bottom Charts](images/thingspeak_real_bottom.png) |
-
 ## 📊 Results
 
 | Parameter | Measured Range | WHO Safe Limit | Status |
@@ -102,11 +90,11 @@ Flash `wokwi/sketch_v2.ino` to a real ESP32 using Arduino IDE:
 | Humidity | 60 - 80% | 30 - 80% | ✅ Normal |
 | Water Safety | 0/1 | 1 (Safe) | 41 Safe, 6 Danger |
 
-## 📱 Dashboard Screenshots
+## 🖥️ Simulation Screenshots
 
-| AquaGuard Dashboard | Charts & Alert Log |
-|:---:|:---:|
-| ![Dashboard](images/dashboard_main.png) | ![Charts](images/dashboard_charts.png) |
+| Full Circuit View | Sensor Readings | Initial State |
+|:---:|:---:|:---:|
+| ![Full Circuit](images/simulation_full.png) | ![Sensors](images/simulation_sensors.png) | ![Initial](images/simulation_initial.png) |
 
 ## 🔮 Future Scope
 
