@@ -47,8 +47,8 @@ water_monitoring/
 ### 1. Wokwi Simulation (No Hardware Required)
 
 1. Go to [wokwi.com](https://wokwi.com/projects/new/esp32)
-2. Replace `sketch.ino` content with the code from `wokwi/sketch.ino`
-3. Switch to `diagram.json` tab and paste content from `wokwi/diagram.json`
+2. Paste the contents of `wokwi/sketch_v2.ino` into the sketch editor
+3. Switch to the `diagram.json` tab and paste contents of `wokwi/diagram.json`
 4. Add libraries: `LiquidCrystal I2C` and `DHT sensor library for ESPx`
 5. Click **Start Simulation** ▶️
 6. Adjust potentiometers to simulate different water conditions
@@ -61,10 +61,10 @@ water_monitoring/
 
 ### 3. Hardware Implementation
 
-Flash `wokwi/sketch.ino` to a real ESP32 using Arduino IDE:
+Flash `wokwi/sketch_v2.ino` to a real ESP32 using Arduino IDE:
 - Install Arduino IDE → Add ESP32 board support
 - Install libraries: `LiquidCrystal I2C`, `DHT sensor library for ESPx`
-- Update WiFi credentials in the code
+- Update WiFi credentials and ThingSpeak API key in the code
 - Upload and connect sensors as per the pin table above
 
 ## ☁️ Cloud Integration (ThingSpeak)
